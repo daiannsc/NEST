@@ -185,8 +185,8 @@ with st.form(key="form1"):
         #creating a rectangularxsquared box of cells of given size, the size of x and z is set as 6.0 except for the y axis but it cand be changed to another number if needed or to a variable to be set by the user. Then it will be cutted to give a cilindrical shape with spherical ends
         x_min= -6.0
         x_max= 6.0
-        y_min= -6.0
-        y_max= 6.0 + size  
+        y_min= -4.0
+        y_max= 8.0 + size  
         z_min= -6.0
         z_max= 6.0
         
