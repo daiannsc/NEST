@@ -182,13 +182,13 @@ with st.form(key="form1"):
             h1 = (radia[n]-math.sqrt(radia[n]**2 - (cell_size/2)**2)) 
             ht.append( h1 - (math.pi)*(h1**2)*(3*radia[n] - h1)/(3*(cell_size)**2))
         
-        #creating a rectangularxsquared box of cells of given size, the size of x and z is set as 4.0 except for the y axis but it cand be changed to another number if needed or to a variable to be set by the user. Then it will be cutted to give a cilindrical shape with spherical ends
-        x_min= -4.0
-        x_max= 4.0
-        y_min= -4.0
-        y_max= 4.0 + size  
-        z_min= -4.0
-        z_max= 4.0
+        #creating a rectangularxsquared box of cells of given size, the size of x and z is set as 4.5 except for the y axis but it cand be changed to another number if needed or to a variable to be set by the user. Then it will be cutted to give a cilindrical shape with spherical ends
+        x_min= -4.5
+        x_max= 4.5
+        y_min= -4.5
+        y_max= 4.5 + size  
+        z_min= -4.5
+        z_max= 4.5
         
         #defining number of cells in each axis
         n_cells_x=int((x_max-x_min)/cell_size)
@@ -225,7 +225,7 @@ with st.form(key="form1"):
                     eix0 = calc_dist(x_cell, y_cell, z_cell, 0, 0, 0)
                     eixend= calc_dist(x_cell, y_cell, z_cell, 0, size, 0)
                     #if the cell is out of the desired parameters / volume the "cell occupied" is set to number "2" that is given to cells out of the shape 
-                    if ((y_cell <= 0.000 and eix0 >= 4.00001) or (y_cell > 0.000 and y_cell < size and eixy >=4.00001) or (y_cell >= size and eixend >= 4.00001)):
+                    if ((y_cell <= 0.000 and eix0 >= 4.50001) or (y_cell > 0.000 and y_cell < size and eixy >=4.50001) or (y_cell >= size and eixend >= 4.50001)):
                         cell_occupied = 2
                     else:
                         #checking if the desired cell is occupied, if so number 1 is given.
